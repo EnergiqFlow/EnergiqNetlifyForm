@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Wellness Form</title>
+    <meta name="description" content="A responsive form for gathering wellness information with step-by-step navigation and integration options." />
+    <link rel="icon" type="image/svg+xml" href="/placeholder.svg" />
+
+    <meta property="og:title" content="Dynamic Wellness Form" />
+    <meta property="og:description" content="A responsive form for gathering wellness information with step-by-step navigation and integration options." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/og.jpg" />
+  </head>
+
+  <body>
+    <form name="wellness-questionnaire" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="text" name="phone" />
+      <input type="text" name="gender" />
+      <input type="text" name="ageRange" />
+      <input type="text" name="weightRange" />
+      <textarea name="currentFeeling"></textarea>
+      <textarea name="overallWellness"></textarea>
+      <textarea name="mainConcern"></textarea>
+      <input type="text" name="duration" />
+      <input type="text" name="stressLevel" />
+      <input type="text" name="happinessLevel" />
+      <input type="text" name="sleepHours" />
+      <input type="text" name="sleepQuality" />
+      <input type="text" name="exerciseFrequency" />
+      <input type="text" name="exerciseType" />
+      <input type="text" name="dietType" />
+      <input type="text" name="waterIntake" />
+      <input type="text" name="smokingStatus" />
+      <input type="text" name="alcoholConsumption" />
+      <input type="text" name="workEnvironment" />
+      <input type="text" name="relationshipStatus" />
+      <textarea name="consumptions"></textarea>
+      <textarea name="currentSymptoms"></textarea>
+      <textarea name="bodySymptoms"></textarea>
+      <textarea name="dailyImpact"></textarea>
+      <input type="text" name="symptomSeverity" />
+      <textarea name="symptomsBegin"></textarea>
+      <textarea name="causedBy"></textarea>
+      <textarea name="previousTreatments"></textarea>
+      <textarea name="medications"></textarea>
+      <textarea name="allergies"></textarea>
+      <textarea name="injuries"></textarea>
+      <textarea name="surgeries"></textarea>
+      <textarea name="sleepIssues"></textarea>
+      <textarea name="significantEvents"></textarea>
+      <textarea name="childhoodIllnesses"></textarea>
+      <textarea name="mainGoals"></textarea>
+      <textarea name="dailyLifeImpact"></textarea>
+      <textarea name="hopingToImprove"></textarea>
+      <input type="text" name="readinessLevel" />
+      <textarea name="additionalInfo"></textarea>
+      <textarea name="spinalFlowGoals"></textarea>
+      <input type="text" name="readyToChange" />
+      <input type="text" name="photoPermission" />
+      <input type="text" name="fullName" />
+      <input type="date" name="date" />
+    </form>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
