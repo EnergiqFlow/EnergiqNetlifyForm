@@ -97,12 +97,13 @@ const GoalsStep: React.FC<Props> = ({ formData, setFormData }) => {
           <label className="block text-sm font-medium text-slate-700 mb-2">
             What activities or aspects of life are you hoping to improve or return to?
           </label>
+          <p className="text-sm text-slate-600 mb-2">Sports, activities, general wellness goals...</p>
           <textarea
             value={formData.goals?.hopingToImprove || ''}
             onChange={(e) => updateGoals('hopingToImprove', e.target.value)}
             className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
             rows={3}
-            placeholder="Please describe what you hope to achieve or return to..."
+            placeholder="e.g., Return to playing tennis, improve sleep quality, reduce back pain for gardening..."
           />
         </div>
 

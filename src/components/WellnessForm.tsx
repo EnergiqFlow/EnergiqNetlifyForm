@@ -28,19 +28,8 @@ interface FormData {
     happinessLevel: string;
     sleepHours: string;
     sleepQuality: string;
-    exerciseFrequency: string;
-    exerciseType: string;
-    dietType: string;
-    waterIntake: string;
-    smokingStatus: string;
-    alcoholConsumption: string;
-    workEnvironment: string;
-    relationshipStatus: string;
-    consumptions: string[];
   };
   symptomDetails: {
-    stressLevel: string;
-    happinessLevel: string;
     currentSymptoms: string[];
     bodySymptoms: string;
     dailyImpact: string;
@@ -86,8 +75,8 @@ const WellnessForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     personalInfo: { firstName: '', lastName: '', email: '', phone: '', ageRange: '', weightRange: '', gender: '' },
     currentWellness: { currentFeeling: '', overallWellness: '', mainConcern: '', duration: '' },
-    lifestyle: { stressLevel: '', happinessLevel: '', sleepHours: '', sleepQuality: '', exerciseFrequency: '', exerciseType: '', dietType: '', waterIntake: '', smokingStatus: '', alcoholConsumption: '', workEnvironment: '', relationshipStatus: '', consumptions: [] },
-    symptomDetails: { stressLevel: '', happinessLevel: '', currentSymptoms: [], bodySymptoms: '', dailyImpact: '', symptomSeverity: '' },
+    lifestyle: { stressLevel: '', happinessLevel: '', sleepHours: '', sleepQuality: '' },
+    symptomDetails: { currentSymptoms: [], bodySymptoms: '', dailyImpact: '', symptomSeverity: '' },
     healthHistory: { symptomsBegin: '', causedBy: '', previousTreatments: '', medications: '', allergies: '', injuries: '', surgeries: '', sleepIssues: '', significantEvents: '', childhoodIllnesses: '' },
     goals: { mainGoals: '', dailyLifeImpact: '', hopingToImprove: '', readinessLevel: '', additionalInfo: '', spinalFlowGoals: '', readyToChange: '' },
     signature: { consentTreatment: false, consentInfo: false, understandSymptoms: false, understandProcess: false, consentDecision: false, readUnderstood: false, photoPermission: '', fullName: '', date: new Date().toISOString().split('T')[0] }

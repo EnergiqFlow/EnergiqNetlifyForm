@@ -48,54 +48,6 @@ const SymptomDetailsStep: React.FC<SymptomDetailsStepProps> = ({ formData, setFo
     <div className="space-y-6">
       <h2 className="text-2xl font-semibold text-slate-800 mb-6">What is your body telling you?</h2>
       
-      {/* Stress Level */}
-      <div className="bg-slate-50 p-6 rounded-lg">
-        <label className="block text-slate-700 font-medium mb-3">On a scale of 1-10 how much stress is in your life?</label>
-        <div className="flex items-center space-x-4">
-          <span className="text-sm text-slate-500">Low (1)</span>
-          <div className="flex space-x-2">
-            {[1,2,3,4,5,6,7,8,9,10].map(rating => (
-              <label key={rating} className="flex items-center">
-                <input
-                  type="radio"
-                  name="stressLevel"
-                  value={rating}
-                  checked={formData.symptomDetails?.stressLevel === rating.toString()}
-                  onChange={(e) => updateSymptomDetails('stressLevel', e.target.value)}
-                  className="w-4 h-4 text-amber-600 border-slate-300 focus:ring-amber-500"
-                />
-                <span className="ml-1 text-sm text-slate-700">{rating}</span>
-              </label>
-            ))}
-          </div>
-          <span className="text-sm text-slate-500">High (10)</span>
-        </div>
-      </div>
-
-      {/* Happiness Level */}
-      <div className="bg-slate-50 p-6 rounded-lg">
-        <label className="block text-slate-700 font-medium mb-3">On a scale of 1-10 how happy are you?</label>
-        <div className="flex items-center space-x-4">
-          <span className="text-sm text-slate-500">Low (1)</span>
-          <div className="flex space-x-2">
-            {[1,2,3,4,5,6,7,8,9,10].map(rating => (
-              <label key={rating} className="flex items-center">
-                <input
-                  type="radio"
-                  name="happinessLevel"
-                  value={rating}
-                  checked={formData.symptomDetails?.happinessLevel === rating.toString()}
-                  onChange={(e) => updateSymptomDetails('happinessLevel', e.target.value)}
-                  className="w-4 h-4 text-amber-600 border-slate-300 focus:ring-amber-500"
-                />
-                <span className="ml-1 text-sm text-slate-700">{rating}</span>
-              </label>
-            ))}
-          </div>
-          <span className="text-sm text-slate-500">High (10)</span>
-        </div>
-      </div>
-
       {/* Symptom Checklist */}
       <div>
         <label className="block text-slate-700 font-medium mb-4">What is your body telling you right now? Please tick any symptoms you are experiencing right now.</label>

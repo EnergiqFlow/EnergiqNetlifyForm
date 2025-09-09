@@ -1,3 +1,23 @@
+import React, { useState } from 'react';
+import PersonalInfoStep from './PersonalInfoStep';
+import CurrentWellnessStep from './CurrentWellnessStep';
+import LifestyleStep from './LifestyleStep';
+import SymptomDetailsStep from './SymptomDetailsStep';
+import HealthHistoryStepNew from './HealthHistoryStepNew';
+import GoalsStep from './GoalsStep';
+import SignatureStep from './SignatureStep';
+
+const WellnessForm: React.FC = () => {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({});
+  const totalSteps = 8;
+  const progressPercentage = ((currentStep + 1) / totalSteps) * 100;
+
+  const nextStep = () => setCurrentStep(prev => Math.min(prev + 1, totalSteps - 1));
+  const prevStep = () => setCurrentStep(prev => Math.max(prev - 1, 0));
+  const handleSubmit = () => setIsSubmitted(true);
+
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-amber-800 via-slate-600 to-slate-800 flex items-center justify-center p-4">
